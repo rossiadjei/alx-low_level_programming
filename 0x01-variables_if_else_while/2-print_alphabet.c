@@ -12,7 +12,6 @@ int main(void)
 	for (apht = 'a' ; apht <= 'z' ; apht++)
 	{
 		putchar(apht);
-		putchar('\n');
 	}
 	return (0);
 }
