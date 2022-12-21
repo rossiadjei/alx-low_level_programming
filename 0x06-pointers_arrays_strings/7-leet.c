@@ -1,29 +1,27 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * leet - replace letters with numbers
- * @s: pointer to an array of words
+ * leet - Encodes a string to 1337.
+ * @str: The string to be encoded.
  *
- * Return: s
+ * Return: A pointer to the encoded string.
  */
-
-char *leet(char *s)
+char *leet(char *str)
 {
-	int a, b;
+	int indx1 = 0, indx2;
+	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	char ros[] = "aeot";
-	char ros1[] = "AEOT";
-	char res[] = "1337";
-
-	for (a = 0; s[a] != '\0'; a++)
+	while (str[indx1])
 	{
-		for (b = 0; ros[b] !=  '\0' && ros1[b] != '\0'; b++)
+		for (indx2 = 0; indx2 <= 7; indx2++)
 		{
-			if (s[a] == ros[b] || s[a] == ros1[b])
-			{
-				s[a] = res[b];
-			}
+			if (str[indx1] == leet[indx2] ||
+			    str[indx1] - 32 == leet[indx2])
+				str[indx1] = indx2 + '0';
 		}
+
+		indx1++;
 	}
-	return (s);
+
+	return (str);
 }
