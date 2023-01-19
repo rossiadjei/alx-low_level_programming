@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - print numbers followed by anew line
- * @seperator: string to seperate the numbers
+ * @separator: string to seperate the numbers
  * @n: is the number of integers passed to the function
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -22,7 +22,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 	printf("\n");
-	
 	va_end(arg);
 
 }
